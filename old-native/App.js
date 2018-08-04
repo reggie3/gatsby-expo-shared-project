@@ -1,7 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import {getNumber} from 'test';
 
 export default class App extends React.Component {
+  componentDidMount=()=>{
+    getNumber();
+  }
   render() {
     return (
       <View style={styles.container}>
