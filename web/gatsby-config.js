@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-root-import',
       options: {
-        root: path.join(__dirname, '/../common'),
+        root: path.join(__dirname, '/../shared'),
       },
     },
   ],
