@@ -1,23 +1,25 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import {getNumber} from 'test';
+import { add } from 'shared';
 
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      number: 0
+    };
   }
 
-  componentDidMount=()=>{
-    getNumber()
+  componentDidMount() {
+    debugger;
+    this.setState({number:add(5,6)});
   }
 
   render() {
     return (
-      <div>
-        <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
-        <Link to="/page-2/">Go to page 2</Link>
+      <div >
+        <p>Open up App.js to start working on your app!</p>
+        <p>{this.state.number}</p>
       </div>
     );
   }
